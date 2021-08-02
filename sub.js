@@ -17,12 +17,19 @@ let lang = prompt('На какой язык переключиться - ru/en?'
 //         console.log('Нет такого языка!');
 // }
 
-let arr = {
-    'ru': ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
-    'en': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-};
+// let arr = {
+//     'ru': ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+//     'en': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+// };
 
-console.log(arr[lang]);
+// console.log(arr[lang]);
+
+let newArr = new Map([
+    ['ru', ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']],
+    ['en', ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']]
+]);
+
+console.log(newArr.get(lang));
 
 
 // let namePerson = prompt('Введите имя Артем, Максим или любое другое', 'Артем');
