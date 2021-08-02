@@ -1,19 +1,29 @@
-let num = 266219;
-let str = String(num).split('');
+let lang = prompt('На какой язык переключиться - ru/en?', '');
 
-// let result = str.reduce((mul, item) => mul * item, 1);
-// console.log(result);
-// let numberPow1 = result1 ** 3;
+// if(lang === 'ru') {
+//    console.log(['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']);
+// } else if(lang === 'en') {
+//    console.log(['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']);
+// }
+
+// switch (lang) {
+//     case 'ru':
+//         console.log(['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']);
+//         break;
+//     case 'en':
+//         console.log(['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']);
+//         break;
+//     default:
+//         console.log('Нет такого языка!');
+// }
+
+let arr = {
+    'ru': ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+    'en': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+};
+console.log(arr[lang])
 
 
-let result2 = 1;
-
-for (let i = 0; i < str.length; i++) {
-    result2 *= str[i];
-}
-console.log(result2);
-
-let numberPow2 = result2 **3;
-console.log(numberPow2);
-let strNumberPow2 = String(numberPow2).slice(0, 2);
-console.log(+strNumberPow2);
+// let namePerson = prompt('Введите имя Артем, Максим или любое другое', 'Артем');
+// let message = (namePerson === 'Артем') ? console.log('Директор') :
+// (namePerson === 'Максим') ? console.log('преподаватель') : console.log('студент');
