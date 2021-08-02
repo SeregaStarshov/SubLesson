@@ -21,7 +21,8 @@ let arr = {
     'ru': ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
     'en': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 };
-console.log(arr[lang])
+
+console.log(arr[lang]);
 
 
 // let namePerson = prompt('Введите имя Артем, Максим или любое другое', 'Артем');
