@@ -1,37 +1,29 @@
-let lang = prompt('На какой язык переключиться - ru/en?', '');
+let str = 'На улице испортилась погода и идет дождь.';
+let string;
 
-// if(lang === 'ru') {
-//    console.log(['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']);
-// } else if(lang === 'en') {
-//    console.log(['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']);
-// }
+function transformString(item) {
+    if (item === '' || Number(item) || item === null) {
+        alert('Вы ввели неверное значение!');
+    }
 
-// switch (lang) {
-//     case 'ru':
-//         console.log(['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']);
-//         break;
-//     case 'en':
-//         console.log(['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']);
-//         break;
-//     default:
-//         console.log('Нет такого языка!');
-// }
+    let arr = item.split('');
 
-// let arr = {
-//     'ru': ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
-//     'en': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-// };
+    for (let i = 0; i < arr.length; i++) {
 
-// console.log(arr[lang]);
+        if(arr[i] === " ") {
+            arr.splice(i, 1);
+        }
+    }
 
-let newArr = new Map([
-    ['ru', ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']],
-    ['en', ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']]
-]);
+    if (arr.length < 30) {
+        return arr;
+    }
+    string = arr.slice(0, 31).join('');
+    string += '...';
+    return string;
+    
+}
 
-console.log(newArr.get(lang));
-
-
-// let namePerson = prompt('Введите имя Артем, Максим или любое другое', 'Артем');
-// let message = (namePerson === 'Артем') ? console.log('Директор') :
-// (namePerson === 'Максим') ? console.log('преподаватель') : console.log('студент');
+transformString(str);
+console.log(string);
+// Как можно сделать решение короче?
