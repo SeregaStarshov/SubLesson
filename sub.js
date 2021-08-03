@@ -26,7 +26,9 @@ let string;
 
 // transformString(str);
 // console.log(string);
+
 // Как можно сделать решение короче?
+// Переделал))Но впорос отстается как уменьшить код написанный выше. Через метод forEach так и не смог додумать как сделать. если это можно сделать.
 
 function transformString(item) {
     if (item === '' || Number(item) || item === null) {
