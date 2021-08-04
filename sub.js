@@ -1,41 +1,9 @@
-let str = ' На улице испортилась погода и идет дождь. ';
-let string;
+let number = 100;
+next:
+for (let i = 2; i < number; i++) {
 
-// function transformString(item) {
-//     if (item === '' || Number(item) || item === null) {
-//         alert('Вы ввели неверное значение!');
-//     }
-
-//     let arr = item.split('');
-
-//     for (let i = 0; i < arr.length; i++) {
-
-//         if(arr[i] === " ") {
-//             arr.splice(i, 1);
-//         }
-//     }
-
-//     if (arr.length < 30) {
-//         return arr;
-//     }
-//     string = arr.slice(0, 31).join('');
-//     string += '...';
-//     return string;
-    
-// }
-
-// transformString(str);
-// console.log(string);
-
-// Как можно сделать решение короче?
-// Переделал))Но впорос отстается как уменьшить код написанный выше. Через метод forEach так и не смог додумать как сделать. если это можно сделать.
-
-function transformString(item) {
-    if (item === '' || Number(item) || item === null) {
-        alert('Вы ввели неверное значение!');
+    for (let j = 2; j < i; j++) {
+        if(i % j === 0) continue next;
     }
-    string = item.trim().slice(0, 31);
-    string += '...';
+    console.log(`${i} делитель данного числа 1 и ${i}`);
 }
-transformString(str)
-console.log(string)
