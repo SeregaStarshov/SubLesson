@@ -1,26 +1,21 @@
-let number = 100;
 
-check:
-for (let i = 2; i < number; i++) {
+const list = document.createElement('ul');
+document.body.append(list);
 
-    for (let j = 2; j < i; j++) {
-        if(i % j === 0) continue check;
+
+
+let week = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
+
+let currentDay = new Date();
+
+for (let i = 0; i < week.length; i++) {
+    let day = document.createElement('li');
+    day.innerHTML = week[i];
+    list.append(day);
+    if(i === 5 || i === 6) {
+        day.style.fontStyle = 'italic';
     }
-    console.log(`${i} Делители этого числа: 1 и ${i}`);
-}
-
-
-
-
-let arr = [];
-
-arr[0] = '439';
-arr.push('322', '846', '22', '743', '42489', '3854');
-console.log(arr);
-
-
-for (let i = 0; i < arr.length; i++) {
-    if(arr[i].startsWith(2) || arr[i].startsWith(4)) {
-        console.log(arr[i]);
-    } 
+    if(i === currentDay.getDay() - 1) {
+        day.style.fontWeight = 'bold';
+    }
 }
