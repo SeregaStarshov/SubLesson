@@ -60,7 +60,7 @@ function getTimes(time) {
             
         }
     } else if(time === currentDay.getSeconds()) {
-        if (time === 1 || time === 21) {
+        if (time === 1 || time === 21 || time === 31 || time === 41 || time === 51) {
             strHours = 'секунда';
             str = `${time} ${strHours}`;
         } else if(time > 1 && time < 5 || time > 21 && time <= 24 || time > 31 && time <= 34 || time > 41 && time <= 44 || time > 51 && time <= 54) {
